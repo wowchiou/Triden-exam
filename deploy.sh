@@ -15,15 +15,15 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git remote add origin https://github.com/wowchiou/Taiwain-Sightseeing.git
-git checkout master
+git remote add origin https://github.com/wowchiou/Triden-exam.git
+git checkout deploy
 
 # 部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:wowchiou/Taiwain-Sightseeing.git master
+# git push -f git@github.com:wowchiou/Triden-exam.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:wowchiou/Tainwain-Sightseeing.git master:gh-pages
 
-git push -f --set-upstream origin master
+git push -f --set-upstream origin deploy
 
 cd -
