@@ -12,18 +12,22 @@ cd dist
 # 部署到自定义域域名
 # echo 'www.example.com' > CNAME
 
+# 移除舊的 Git（這是關鍵修正！）
+rm -rf .git
+
 git init
 git add -A
 git commit -m 'deploy'
+git branch -M deploy
 git remote add origin https://github.com/wowchiou/Triden-exam.git
-git checkout deploy
+git push -f origin deploy
 
 # 部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:wowchiou/Triden-exam.git master
+# git push -f git@github.com:wowchiou/Triden-exam.git deploy
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:wowchiou/Tainwain-Sightseeing.git master:gh-pages
 
-git push -f --set-upstream origin deploy
+# git push -f --set-upstream origin deploy
 
 cd -
